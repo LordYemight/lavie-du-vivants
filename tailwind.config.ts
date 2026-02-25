@@ -1,22 +1,31 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
-        primary: '#1a1a2e', // Deep Blue/Black
-        secondary: '#f5e6ca', // Cream/Gold
-        accent: '#e84393', // Vibrant Pink/Magenta
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
       },
       fontFamily: {
-        sans: ['var(--font-body)', 'Inter', 'sans-serif'],
-        heading: ['var(--font-heading)', 'Cormorant Garamond', 'serif'],
+        heading: ["var(--font-heading)"],
+        sans: ["var(--font-body)"],
       },
       animation: {
-        'confetti-slow': 'confetti 10s linear 1',
-        'pulse-glow-accent': 'pulse-glow 3s infinite ease-in-out',
-      }
+        marquee: "marquee 25s linear infinite",
+        float: "float 6s ease-in-out infinite",
+        fadeIn: "fadeIn 0.8s ease-out forwards",
+        slideUp: "slideUp 0.8s ease-out forwards",
+        pulseGlow: "pulse-glow 3s infinite",
+      },
     },
   },
   plugins: [],
 };
+export default config;
