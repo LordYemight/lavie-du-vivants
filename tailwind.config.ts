@@ -9,20 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary)",
-        secondary: "var(--secondary)",
-        accent: "var(--accent)",
+        primary: "#1a1a2e",
+        secondary: "#f5e6ca",
+        accent: "#e84393",
       },
       fontFamily: {
         heading: ["var(--font-heading)"],
         sans: ["var(--font-body)"],
-      },
-      animation: {
-        marquee: "marquee 25s linear infinite",
-        float: "float 6s ease-in-out infinite",
-        fadeIn: "fadeIn 0.8s ease-out forwards",
-        slideUp: "slideUp 0.8s ease-out forwards",
-        pulseGlow: "pulse-glow 3s infinite",
       },
     },
   },
